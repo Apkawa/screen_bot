@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
-from itertools import izip, cycle
-from time import sleep
 import logging
 
-
-from screen_bot.core import BaseBot, BaseExplorer, Screen, Point, RGB, Color
+from screen_bot.core import (
+        BaseBot, BaseExplorer,
+        Screen, Point, RGB, Color
+        )
 
 
 logging.basicConfig()
