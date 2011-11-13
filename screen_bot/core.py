@@ -15,7 +15,6 @@ log = logging.getLogger('screen_bot:core')
 log.setLevel(logging.INFO)
 
 
-
 Point = namedtuple('Point', ['x', 'y'])
 RGB = namedtuple('RGB', ['r', 'g', 'b'])
 
@@ -69,7 +68,6 @@ class Color(object):
 class Screenshoter(object):
     def screen(self, x1=None, y1=None, x2=None, y2=None):
         return ScreenGrab().screen(x1, y1, x2, y2)
-
 
 
 class Screen(object):
@@ -195,7 +193,6 @@ class BaseExplorer(object):
         self.mouse_action('release', x, y)
 
 
-
 class BaseBot(object):
     screen_class = Screen
 
@@ -218,4 +215,3 @@ class BaseBot(object):
 
     def init_screen(self):
         self.set_screen(self.screen_class.init_screen())
-

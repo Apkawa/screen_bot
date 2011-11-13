@@ -52,7 +52,6 @@ class Recorder(pymouse.PyMouseEvent):
             self.get_color(x, y)
             self.record(x, y, button, press)
 
-
     def move(self, x, y):
         """Subclass this method with your move event handler"""
 
@@ -79,6 +78,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         rec.stop()
         log.info("FINISH")
-
-
-

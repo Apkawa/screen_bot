@@ -33,7 +33,8 @@ class ExampleScreen(Screen):
                 {'x': x, 'y': y, 'rgb': (0, 0, 0)},
                 {'x': x + self.width - 1, 'y': y, 'rgb': (0, 0, 0)},
                 {'x': x, 'y': y + self.height - 1, 'rgb': (0, 0, 0)},
-                {'x': x + self.width - 1, 'y': y + self.height - 1, 'rgb': (0, 0, 0)},
+                {'x': x + self.width - 1,
+                    'y': y + self.height - 1, 'rgb': (0, 0, 0)},
                 ])
 
     def get_display_size(self):
@@ -50,11 +51,13 @@ class ExampleBot(BaseBot):
         pix = pix or self.screen.get_screen_image().load()
         return Color.match_all_color(pix,
                 [
-                {'x': self.screen.width / 2, 'y': self.screen.height / 2, 'rgb': (0, 0, 0)},
+                {'x': self.screen.width / 2,
+                    'y': self.screen.height / 2, 'rgb': (0, 0, 0)},
                 ])
 
     def start(self):
         self.init_screen()
+
 
 def main():
     g = GameBot()
